@@ -1,0 +1,27 @@
+MACSec:
+
+1: https://cdn.vector.com/cms/content/events/2021/vAES21/vAES21_05_Parmar_Marvell.pdf
+2: https://webthesis.biblio.polito.it/39806/1/tesi.pdf
+http://autosar.org/fileadmin/standards/R23-11/AP/AUTOSAR_AP_EXP_MACsec.pdf
+proof that config is needed but not anything else
+
+IPSec:
+https://aws.amazon.com/what-is/ipsec/
+https://www.autosar.org/fileadmin/standards/R22-11/AP/AUTOSAR_EXP_IPsecImplementationGuidelines.pdf
+
+TLS/DTLS:
+https://tools.ietf.org/html/rfc6347
+https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/
+
+SecOC:
+https://www.linkedin.com/pulse/cyber-security-autosar-secure-onboard-communication-rpmve/
+
+
+
+## IAM
+1. **[Expleo: AUTOSAR access control features for SDVs](https://expleo.com/global/en/insights/blog/access-control-in-autosar/)** (2025): It explains how developers declare access needs at design time, integrators review them and turn them into grants, and remote identity can be strengthened with IPsec or MACsec. It also covers how IAM sits alongside SOME/IP-ACL and firewalls.
+2. **[ITK Engineering slides: Keeping Your ECU Secure Against Compromised Adaptive Applications](https://cdn.vector.com/cms/content/events/2021/vSES21/vSES21_Slides_08_Neitzel_ITK.pdf)** (2021): It argues that IAM limits what an attacker can control by enforcing policies on interfaces, but is not enough alone and needs isolation, secure communication, secure boot and secure update. This is the best one for understanding what IAM does not protect against.
+
+## SecOC
+1. **[Elektrobit: Secure Automotive Ethernet for automated driving](https://www.elektrobit.com/blog/automotive-ethernet-automated-driving-multi-level-security/)**: The sender computes a MAC from the data, a connection-specific key and a freshness value (timestamp or counter). The receiver repeats the calculation to catch unauthorized senders, replays and tampering.
+2. **[University of Porto thesis: Attack Model Implementation for a Secure Onboard Communication](https://repositorio-aberto.up.pt/bitstream/10216/121626/2/344525.pdf)**: It gives an overview of SecOC and shows that poor implementations still allow replay attacks. It looks Classic Platform oriented, but the concepts carry over because AP SecOC follows the Classic behavior (CM spec p. 225).
